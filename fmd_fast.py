@@ -24,7 +24,10 @@ def load_data(data_dir='/content/image', seed=42, train_rate=0.5):
     return trainset, testset
     
     
-trainset, testset = load_data(seed=k, train_rate=0.5)
+    
+# Example usage
+
+trainset, testset = load_data(seed=42, train_rate=0.5)
 
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
 testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
